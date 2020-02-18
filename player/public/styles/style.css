@@ -1657,8 +1657,8 @@ ion-popover-view.fit ion-content {
     background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
-    width: 98%;
-    height: 96vh;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
