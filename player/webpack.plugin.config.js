@@ -135,7 +135,9 @@ module.exports = (env, argv) => {
 	console.info(`Plugins are packaging for ${env.channel} environment`)
 	return {
 		entry: getEntryFiles(),
-
+		node: {
+			fs: "empty"
+		},
 		output: {
 			filename: "[name]",
 			path: path.resolve(__dirname, OUTPUT_PATH),
@@ -184,7 +186,7 @@ module.exports = (env, argv) => {
 				test: require.resolve(`${PLUGINS_BASE_PATH}org.ekstep.pdfrenderer-1.0/renderer/libs/pdf.js`),
 				use: [{
 					loader: "expose-loader",
-					options: "pdfjs"
+					options: "pdfjsLib"
 				}]
 			},
 			{
@@ -240,6 +242,7 @@ module.exports = (env, argv) => {
 				toastr: path.resolve(`${PLUGINS_BASE_PATH}org.ekstep.toaster-1.0/renderer/libs/toastr.min.js`),
 				CryptoJS: path.resolve(`${PLUGINS_BASE_PATH}org.ekstep.telemetrysync-1.0/renderer/libs/md5.js`),
 				JSZip: path.resolve(`${PLUGINS_BASE_PATH}org.ekstep.epubrenderer-1.0/renderer/libs/jszip.min.js`),
+				pdfjsLib: path.resolve(`${PLUGINS_BASE_PATH}org.ekstep.pdfrenderer-1.0/renderer/libs/pdf.js`),
 				videojs: path.resolve(`${PLUGINS_BASE_PATH}org.ekstep.videorenderer-1.1/renderer/libs/videolibs/video.min.js`)
 			}),
 			new UglifyJsPlugin({
