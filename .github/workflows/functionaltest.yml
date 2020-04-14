@@ -2,14 +2,14 @@
 # Author: Rahul Shukla <rahul.shukla@ilimi.in>
 
 
-name: Sunbird-Content-Player-Functional-Test
+name: Sunbird-Content-Player-Plugin-Unit-Test-Cases
 on:
     push:
       branches:
-      - functional-test
+      - release-2.9.0
     pull_request:
       branches:
-      - functional-test
+      - release-2.9.0
 jobs:
   build:
     runs-on: macOS-latest
