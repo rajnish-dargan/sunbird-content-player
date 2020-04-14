@@ -2,7 +2,7 @@
 # Author: Rahul Shukla <rahul.shukla@ilimi.in>
 
 
-name: Sunbird-Content-Player-Plugin-Unit-Test-Cases
+name: Sunbird-Content-Player-Functional-Test
 on:
     push:
       branches:

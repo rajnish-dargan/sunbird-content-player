@@ -51,13 +51,13 @@ describe(
         })
 
         it('Player shell loaded with fixture stories', async () => {
-            await page.waitForSelector('body > div:nth-child(7) > div > ion-pane > ion-content > div > div:nth-child(46)');
+            await page.waitForSelector('body > div:nth-child(7) > div > ion-pane > ion-content > div > div:nth-child(38)');
             await page.screenshot({ path: '__tests__/screenshots/questionset_fixture_stories.png' });
         })
 
 
         it('Should open plugin test case content', async () => {
-            const playQuestion = await page.waitForSelector('body > div:nth-child(7) > div > ion-pane > ion-content > div > div:nth-child(46)');
+            const playQuestion = await page.waitForSelector('body > div:nth-child(7) > div > ion-pane > ion-content > div > div:nth-child(38)');
             await playQuestion.click();
             await page.waitFor(4000);
             await page.screenshot({ path: '__tests__/screenshots/pluginTestCase_onclick_pluginTestCase.png' });
