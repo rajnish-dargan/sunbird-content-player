@@ -3,7 +3,7 @@
  * @author rahul shukla <rahul.shukla@ilimi.in>
  */
 
-const timeout = 5000
+const timeout = 50000
 
 const typingSpeed = 50
 
@@ -20,7 +20,7 @@ describe(
         beforeAll(async () => {
             jest.setTimeout(timeout);
             page = await global.__BROWSER__.newPage()
-            await page.goto('http://127.0.0.1:3000')
+            await page.goto('http://[::1]:3000')
 
             await page.setViewport({ width: 1280, height: 800 })
             // const metrics = await page.metrics();
