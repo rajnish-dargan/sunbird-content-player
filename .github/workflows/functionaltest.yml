@@ -31,9 +31,9 @@ jobs:
     #   run: |
     #     (cd player && npm run package-coreplugins -- --env.channel=sunbird && npm run build-preview sunbird)
 
-  - name: Start player with fixture stories 
+    - name: Start player with fixture stories 
       run: |
-        (cd player && forever stopall && forever start app.js)
+        (cd player && forever stop 0 && forever start app.js)
     
   
     - name: Install test framework dependencies
