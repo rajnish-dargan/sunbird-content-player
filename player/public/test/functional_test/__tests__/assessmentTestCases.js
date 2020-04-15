@@ -20,7 +20,9 @@ describe(
         beforeAll(async () => {
             jest.setTimeout(timeout);
             page = await global.__BROWSER__.newPage()
-            await page.goto('http://[::1]:3000')
+            await page.goto('http://127.0.0.1:3000').catch(function(e) {
+                console.error(e);
+              });
 
             await page.setViewport({ width: 1280, height: 800 })
             // const metrics = await page.metrics();
