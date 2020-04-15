@@ -33,7 +33,7 @@ jobs:
 
     - name: Start player with fixture stories 
       run: |
-        (cd player && forever stop 0 && forever start app.js)
+        (cd player && forever stop stopall && forever start app.js)
     
   
     - name: Install test framework dependencies
