@@ -36,7 +36,7 @@ AppConfig = {
 		"isAvailable": true,
 		"path": ""
 	},
-	questionMinFontSize: '1.285em',
+	questionMinFontSize: '0.857142857em',
 	contentLaunchers: [{
 		mimeType: ["application/vnd.ekstep.html-archive", "application/vnd.ekstep.h5p-archive"],
 		id: "org.ekstep.htmlrenderer",
